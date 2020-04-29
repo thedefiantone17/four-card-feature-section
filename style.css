@@ -38,10 +38,21 @@ p{
 .box{
   background-color:#ffffff;
   border-radius:5px;
+  position:relative;
+  overflow:hidden;
+  border-top:3px;
   padding:30px;
   margin:15px;
   width: 350px;
   box-shadow:2px 8px 14px 0px hsl(229, 6%, 66%);
+}
+.box::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  height:3px;
+  width:100%;
 }
 
 .box h2{
@@ -57,11 +68,21 @@ p{
   margin-left: auto;
 }
 
-.attribution { 
-  font-size: 11px; 
-  text-align: center; 
+.box-cyan::after{
+  backgound-color: hsl(180, 62%, 55%);
 }
 
-.attribution a { 
-  color: hsl(228, 45%, 44%);
+.box-red::after{
+  background-color:hsl(0, 78%, 62%);
+}
+
+.box-orange::after{
+  background-color:hsl(34, 97%, 64%);
+}
+
+.box-blue::after{
+  background-color:hsl(212, 86%, 64%);
+}
+.box-push{
+  transform:translateY(50%);
 }
